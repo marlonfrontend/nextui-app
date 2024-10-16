@@ -1,14 +1,28 @@
-import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
-export default function DocsPage() {
+import { Card, Input, Dropdown, Button, Checkbox } from "@/ui";
+
+const DocsPage = () => {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-center justify-center">
-          <h1 className={title()}>Docs</h1>
-        </div>
-      </section>
+      <Card>
+        <Card.Header>
+          card header
+        </Card.Header>
+      </Card>
+      <Input label="teste" />
+      <Dropdown>
+        <Dropdown.Trigger>
+          <Button color="primary" size="lg">Continuar</Button>
+        </Dropdown.Trigger>
+        <Dropdown.Menu>
+          <Dropdown.Item key="item1">Item 1</Dropdown.Item>
+          <Dropdown.Item key="item2">Item 2</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      <Checkbox />
     </DefaultLayout>
   );
 }
+
+export default DocsPage

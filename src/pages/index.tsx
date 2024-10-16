@@ -8,7 +8,7 @@ import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 
-export default function IndexPage() {
+const IndexPage = () => {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -23,7 +23,6 @@ export default function IndexPage() {
             Beautiful, fast and modern React UI library.
           </div>
         </div>
-
         <div className="flex gap-3">
           <Link
             isExternal
@@ -58,3 +57,5 @@ export default function IndexPage() {
     </DefaultLayout>
   );
 }
+
+export default IndexPage
