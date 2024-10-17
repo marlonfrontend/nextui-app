@@ -1,6 +1,18 @@
-import { Divider as AppDivider, DividerProps } from "@nextui-org/react";
-import { PropsWithChildren } from "react";
+import { StyledDivider } from './Divider.styles'
+import { DividerProps } from './Divider.types'
 
-export const Divider = ({ children, ...props }: PropsWithChildren<DividerProps>) => {
-  return <AppDivider {...props}>{children}</AppDivider>;
-};
+export const Divider = ({ mt, mb, ml, mr, mx, my, ...props }: DividerProps) => {
+  return (
+    <StyledDivider
+      style={{
+        marginTop: mt || 0,
+        marginBottom: mb || 0,
+        marginLeft: ml || 0,
+        marginRight: mr || 0,
+        marginInline: mx || 0,
+        marginBlock: my || 0
+      }}
+      {...props}
+    ></StyledDivider>
+  )
+}
