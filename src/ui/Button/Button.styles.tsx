@@ -1,11 +1,11 @@
-import {extendVariants, Button, ButtonGroup} from "@nextui-org/react";
+import { extendVariants, Button, ButtonGroup } from '@nextui-org/react'
 
 export const StyledButton = extendVariants(Button, {
   variants: {
     color: {
-      primary: 'bg-[#000]',
-    },
-  },
-});
+      primary: ''
+    }
+  }
+})
 
-export const StyledButtonGroup = extendVariants(ButtonGroup, {});
+export const StyledButtonGroup = extendVariants(ButtonGroup, {})

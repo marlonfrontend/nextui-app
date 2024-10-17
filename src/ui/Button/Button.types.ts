@@ -1,7 +1,7 @@
-import { 
+import {
   ButtonProps as AppButtonProps,
-  ButtonGroupProps as AppButtonGroupProps 
-} from "@nextui-org/button";
+  ButtonGroupProps as AppButtonGroupProps
+} from '@nextui-org/button'
 
 export type ButtonProps = {} & AppButtonProps
 

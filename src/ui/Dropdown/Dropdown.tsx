@@ -5,14 +5,17 @@ import {
   DropdownSection,
   DropdownItem,
   DropdownProps
-} from "@nextui-org/dropdown";
-import { PropsWithChildren } from "react";
+} from '@nextui-org/dropdown'
+import { PropsWithChildren } from 'react'
 
-export const Dropdown = ({ children, ...props }: PropsWithChildren<DropdownProps>) => {
-  return <AppDropdown {...props}>{children}</AppDropdown>;
-};
+export const Dropdown = ({
+  children,
+  ...props
+}: PropsWithChildren<DropdownProps>) => {
+  return <AppDropdown {...props}>{children}</AppDropdown>
+}
 
-Dropdown.Trigger = DropdownTrigger;
-Dropdown.Menu = DropdownMenu;
-Dropdown.Section = DropdownSection;
-Dropdown.Item = DropdownItem;
+Dropdown.Trigger = DropdownTrigger
+Dropdown.Menu = DropdownMenu
+Dropdown.Section = DropdownSection
+Dropdown.Item = DropdownItem

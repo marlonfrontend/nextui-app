@@ -1,34 +1,24 @@
-import { Card as AppCard, CardHeader, CardBody, CardFooter, CardProps } from "@nextui-org/react";
-import { PropsWithChildren } from "react";
+import { CardProps } from './Card.types'
+import {
+  StyledCard,
+  StyledCardHeader,
+  StyledCardBody,
+  StyledCardFooter
+} from './Card.styles'
+import { PropsWithChildren } from 'react'
 
 export const Card = ({ children, ...props }: PropsWithChildren<CardProps>) => {
-  return (
-    <AppCard {...props} classNames={{ base: 'shadow-sm' }}>
-      {children}
-    </AppCard>
-  );
-};
+  return <StyledCard {...props}>{children}</StyledCard>
+}
 
 Card.Header = ({ children }: PropsWithChildren) => {
-  return (
-    <CardHeader>
-      {children}
-    </CardHeader>
-  );
-};
+  return <StyledCardHeader>{children}</StyledCardHeader>
+}
 
 Card.Body = ({ children }: PropsWithChildren) => {
-  return (
-    <CardBody>
-      {children}
-    </CardBody>
-  );
-};
+  return <StyledCardBody>{children}</StyledCardBody>
+}
 
 Card.Footer = ({ children }: PropsWithChildren) => {
-  return (
-    <CardFooter>
-      {children}
-    </CardFooter>
-  );
-};
+  return <StyledCardFooter>{children}</StyledCardFooter>
+}
