@@ -10,6 +10,7 @@ import {
   Breadcrumbs,
   Chip
 } from '@/ui'
+
 const DocsPage = () => {
   return (
     <DefaultLayout>
