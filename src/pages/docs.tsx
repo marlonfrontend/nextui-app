@@ -14,7 +14,8 @@ import {
   Divider,
   Image,
   DatePicker,
-  DateRangePicker
+  DateRangePicker,
+  Spacer
 } from '@/ui'
 import { Logo } from '@/components/icons'
 
@@ -98,6 +99,12 @@ const DocsPage = () => {
 
       <Divider my={20} />
 
+      <Image
+        src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+        alt="alt"
+        width={400}
+      />
+      <Spacer y={4} />
       <Image
         src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
         alt="alt"
