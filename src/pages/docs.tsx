@@ -1,5 +1,4 @@
 import DefaultLayout from '@/layouts/default'
-
 import {
   Card,
   Input,
@@ -18,7 +17,9 @@ import {
   Spacer,
   Link,
   Skeleton,
-  Grid
+  Grid,
+  Accordion,
+  DateInput
 } from '@/ui'
 import { Logo } from '@/components/icons'
 
@@ -98,19 +99,20 @@ const DocsPage = () => {
 
       <Divider my={20} />
 
+      <DateInput />
       <DateRangePicker />
 
       <Divider my={20} />
 
       <Image
-        src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
         alt="alt"
+        src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
         width={400}
       />
       <Spacer y={4} />
       <Image
-        src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
         alt="alt"
+        src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
         width={400}
       />
       <Link href="#">Link</Link>
@@ -119,17 +121,17 @@ const DocsPage = () => {
 
       <Card className="w-[200px] space-y-5 p-4" radius="lg">
         <Skeleton>
-          <div className="h-24 rounded-lg bg-default-300"></div>
+          <div className="h-24 rounded-lg bg-default-300" />
         </Skeleton>
         <div className="space-y-3">
           <Skeleton className="w-3/5 rounded-lg">
-            <div className="h-3 w-3/5 rounded-lg bg-default-200"></div>
+            <div className="h-3 w-3/5 rounded-lg bg-default-200" />
           </Skeleton>
           <Skeleton className="w-4/5 rounded-lg">
-            <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
+            <div className="h-3 w-4/5 rounded-lg bg-default-200" />
           </Skeleton>
           <Skeleton className="w-2/5 rounded-lg">
-            <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
+            <div className="h-3 w-2/5 rounded-lg bg-default-300" />
           </Skeleton>
         </div>
       </Card>
@@ -141,6 +143,17 @@ const DocsPage = () => {
         <Grid.Col span={9}>asd</Grid.Col>
         <Grid.Col span={3}>asd</Grid.Col>
       </Grid>
+
+      <Divider my={20} />
+
+      <Accordion>
+        <Accordion.Item title="Item 1">
+          <p>Conteúdo do Item 1</p>
+        </Accordion.Item>
+        <Accordion.Item title="Item 2">
+          <p>Conteúdo do Item 2</p>
+        </Accordion.Item>
+      </Accordion>
     </DefaultLayout>
   )
 }

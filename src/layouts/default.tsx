@@ -1,13 +1,26 @@
-import { Navbar } from '@/components/navbar'
+import { Logo } from '@/components/icons'
+import { Navbar, Progress } from '@/ui'
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative flex flex-col h-screen">
-      <Navbar />
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
-        {children}
-      </main>
-    </div>
+    <>
+      <Navbar maxWidth="xl">
+        <Navbar.Brand>
+          <Logo />
+        </Navbar.Brand>
+        <Navbar.Content>
+          <Navbar.Item>Home</Navbar.Item>
+          <Navbar.Item>About</Navbar.Item>
+        </Navbar.Content>
+      </Navbar>
+      <Progress
+        classNames={{ track: 'rounded-none' }}
+        color="primary"
+        size="sm"
+        value={20}
+      />
+      <main className="w-full flex-grow pt-16">{children}</main>
+    </>
   )
 }
 
