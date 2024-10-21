@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react'
+
 import { StyledBadge } from './Badge.styles'
 import { BadgeProps } from './Badge.types'
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { StyledBreadcrumbs, StyledBreadcrumbItem } from './Breadcrumbs.styles'
 import { BreadcrumbsProps, BreadcrumbItemProps } from './Breadcrumbs.types'
 
