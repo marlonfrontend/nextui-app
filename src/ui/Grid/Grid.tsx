@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { gridVariants, colVariants } from './Grid.styles'
 import { GridProps, ColProps } from './Grid.types'
 
