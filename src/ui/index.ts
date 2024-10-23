@@ -1,4 +1,5 @@
 export * from './Accordion'
+export * from './Avatar'
 export * from './Provider'
 export * from './Card'
 export * from './Input'

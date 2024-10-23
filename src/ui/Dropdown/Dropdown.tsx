@@ -1,12 +1,20 @@
+/* eslint-disable react/display-name */
+import { forwardRef, PropsWithChildren } from 'react'
 import {
   Dropdown as AppDropdown,
   DropdownTrigger,
   DropdownMenu,
   DropdownSection,
-  DropdownItem,
-  DropdownProps
+  DropdownItem
 } from '@nextui-org/dropdown'
-import { PropsWithChildren } from 'react'
+
+import {
+  DropdownProps,
+  DropdownItemProps,
+  DropdownMenuProps,
+  DropdownSectionProps,
+  DropdownTriggerProps
+} from './Dropdown.types'
 
 export const Dropdown = ({
   children,
@@ -15,7 +23,33 @@ export const Dropdown = ({
   return <AppDropdown {...props}>{children}</AppDropdown>
 }
 
-Dropdown.Trigger = DropdownTrigger
-Dropdown.Menu = DropdownMenu
-Dropdown.Section = DropdownSection
-Dropdown.Item = DropdownItem
+Dropdown.Item = ({
+  children,
+  ...props
+}: PropsWithChildren<DropdownItemProps>) => {
+  return <DropdownItem {...props}>{children}</DropdownItem>
+}
+
+Dropdown.Trigger = ({
+  children,
+  ...props
+}: PropsWithChildren<DropdownTriggerProps>) => {
+  return <DropdownTrigger {...props}>{children}</DropdownTrigger>
+}
+
+Dropdown.Menu = forwardRef<HTMLDivElement, DropdownMenuProps>(
+  ({ children, ...props }, ref) => {
+    return (
+      <DropdownMenu {...props} ref={ref}>
+        {children}
+      </DropdownMenu>
+    )
+  }
+)
+
+Dropdown.Section = ({
+  children,
+  ...props
+}: PropsWithChildren<DropdownSectionProps>) => {
+  return <DropdownSection {...props}>{children}</DropdownSection>
+}
