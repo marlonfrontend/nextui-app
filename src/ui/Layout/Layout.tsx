@@ -8,11 +8,11 @@ export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
 }
 
 Layout.Header = ({ children }: PropsWithChildren<LayoutProps>) => {
-  return <header>{children}</header>
+  return <header className="pl-[200px]">{children}</header>
 }
 
 Layout.Main = ({ children }: PropsWithChildren<LayoutProps>) => {
-  return <main className="w-full flex-grow">{children}</main>
+  return <main className="pl-[200px] w-full flex-grow">{children}</main>
 }
 
 Layout.Footer = ({ children }: PropsWithChildren<LayoutProps>) => {
@@ -24,8 +24,8 @@ Layout.Aside = ({
   ...props
 }: PropsWithChildren<LayoutHeaderProps>) => {
   return (
-    <aside className="bg-gray-100 w-[200px] fixed h-full" {...props}>
+    <div className="w-[200px] fixed h-full" {...props}>
       {children}
-    </aside>
+    </div>
   )
 }

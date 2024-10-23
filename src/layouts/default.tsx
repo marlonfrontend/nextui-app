@@ -1,10 +1,13 @@
 import { Logo } from '@/components/icons'
-import { Layout, Navbar } from '@/ui'
+import { Layout, Navbar, Sidebar } from '@/ui'
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
-      <Layout.Aside>sidebar</Layout.Aside>
+      <Layout.Aside>
+        <Sidebar />
+      </Layout.Aside>
+
       <Layout.Header>
         <Navbar maxWidth="xl">
           <Navbar.Brand>
@@ -16,7 +19,9 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
           </Navbar.Content>
         </Navbar>
       </Layout.Header>
+
       <Layout.Main>{children}</Layout.Main>
+
       <Layout.Footer>copyright</Layout.Footer>
     </Layout>
   )
