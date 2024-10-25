@@ -1,12 +1,12 @@
 import { Logo } from '@/components/icons'
-import { Layout, Navbar, Sidebar } from '@/ui'
+import { Layout, Navbar } from '@/ui'
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
-      <Layout.Aside>
+      {/* <Layout.Aside>
         <Sidebar />
-      </Layout.Aside>
+      </Layout.Aside> */}
 
       <Layout.Header>
         <Navbar maxWidth="xl">

@@ -1,16 +1,16 @@
-import DefaultLayout from '@/layouts/default'
+import AnnouncementLayout from '@/layouts/announcement'
 import { Container } from '@/ui'
 
-const IndexPage = () => {
+const AnnouncementPage = () => {
   return (
-    <DefaultLayout>
+    <AnnouncementLayout>
       <Container>
         <div className="p-10">
           <div className="text-4xl text-center">Endereço</div>
         </div>
       </Container>
-    </DefaultLayout>
+    </AnnouncementLayout>
   )
 }
 
-export default IndexPage
+export default AnnouncementPage
