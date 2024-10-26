@@ -4,10 +4,6 @@ import { Layout, Navbar } from '@/ui'
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
-      {/* <Layout.Aside>
-        <Sidebar />
-      </Layout.Aside> */}
-
       <Layout.Header>
         <Navbar maxWidth="xl">
           <Navbar.Brand>
@@ -22,7 +18,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
 
       <Layout.Main>{children}</Layout.Main>
 
-      <Layout.Footer>copyright</Layout.Footer>
+      <Layout.Footer>footer</Layout.Footer>
     </Layout>
   )
 }
