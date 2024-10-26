@@ -1,7 +1,7 @@
 import { Logo } from '@/components/icons'
 import { Layout, Navbar } from '@/ui'
 
-const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
+export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
       <Layout.Header>
@@ -22,5 +22,3 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
     </Layout>
   )
 }
-
-export default DefaultLayout

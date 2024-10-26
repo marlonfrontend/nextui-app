@@ -2,7 +2,11 @@ import { StepNavigator } from '@/components'
 import { Logo } from '@/components/icons'
 import { Button, Layout, Link, Navbar, Icon, Divider, Container } from '@/ui'
 
-const AnnouncementLayout = ({ children }: { children: React.ReactNode }) => {
+export const AnnouncementLayout = ({
+  children
+}: {
+  children: React.ReactNode
+}) => {
   return (
     <Layout>
       <Layout.Header>
@@ -58,5 +62,3 @@ const AnnouncementLayout = ({ children }: { children: React.ReactNode }) => {
     </Layout>
   )
 }
-
-export default AnnouncementLayout

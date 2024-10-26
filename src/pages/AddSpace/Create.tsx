@@ -1,4 +1,4 @@
-import AnnouncementLayout from '@/layouts/announcement'
+import { AnnouncementLayout } from '@/layouts/AnnouncementLayout'
 import { Button, Container, Form, Input, Spacer } from '@/ui'
 
 export const AddSpaceCreatePage = () => {

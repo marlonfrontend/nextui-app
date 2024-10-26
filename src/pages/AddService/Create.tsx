@@ -1,4 +1,4 @@
-import AnnouncementLayout from '@/layouts/announcement'
+import { AnnouncementLayout } from '@/layouts/AnnouncementLayout'
 import { Container } from '@/ui'
 
 export const AddServiceCreatePage = () => {
