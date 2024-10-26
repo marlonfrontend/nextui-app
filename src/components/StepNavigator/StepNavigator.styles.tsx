@@ -23,7 +23,7 @@ export const stepItemStyles = tv({
     isCompleted: {
       true: {
         iconContainer: 'text-green-500',
-        text: 'text-green-500'
+        text: 'text-black'
       },
       false: {}
     }
