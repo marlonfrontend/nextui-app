@@ -1,17 +1,21 @@
 import AnnouncementLayout from '@/layouts/announcement'
-import { Button, Container, Form, Input } from '@/ui'
+import { Button, Container, Form, Input, Spacer } from '@/ui'
 
 const AnnouncementPage = () => {
   return (
     <AnnouncementLayout>
       <Container>
         <div className="p-10">
-          <div className="text-3xl font-medium mb-10">
+          <div className="text-3xl font-medium">
             Informe a localização do seu espaço
           </div>
+          <Spacer y={10} />
           <Form onSubmit={() => console.log('enviar')}>
+            <Input label="CEP" />
+            <Spacer y={5} />
             <Input label="Endereço" />
 
+            <Spacer y={10} />
             <div className="flex justify-between mt-10">
               <Button color="primary" size="lg" variant="light">
                 Cancelar

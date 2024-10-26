@@ -1,5 +1,5 @@
 import { Logo } from '@/components/icons'
-import { Button, Layout, Link, Navbar, Icon, Divider } from '@/ui'
+import { Button, Layout, Link, Navbar, Icon, Divider, Container } from '@/ui'
 
 const AnnouncementLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -39,43 +39,49 @@ const AnnouncementLayout = ({ children }: { children: React.ReactNode }) => {
       </Layout.Header>
 
       <Layout.Main>
-        <div className="flex justify-center h-full">
-          <div className="w-[300px] sticky top-40 pt-40">
-            <ol className="flex flex-col gap-5">
-              <li className="flex items-center gap-2">
-                <div className="flex justify-end items-center w-[30px] relative">
-                  <Icon name="Check" />
-                </div>
-                <span className="font-medium">Localização</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="flex justify-end items-center w-[30px] relative">
-                  <div className="h-[2px] bg-black w-[30px] absolute" />
-                </div>
-                <span className="font-medium">Configuração</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="flex justify-end items-center w-[30px] relative">
-                  <div className="h-[2px] bg-black w-[15px] absolute" />
-                </div>
-                <span className="font-medium">Sobre o espaço</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="flex justify-end items-center w-[30px] relative">
-                  <div className="h-[2px] bg-black w-[15px] absolute" />
-                </div>
-                <span className="font-medium">Disponibilidade</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <div className="flex justify-end items-center w-[30px] relative">
-                  <div className="h-[2px] bg-black w-[15px] absolute" />
-                </div>
-                <span className="font-medium text-lg text-gr">Atividades</span>
-              </li>
-            </ol>
+        <Container>
+          <div className="flex h-full">
+            <div className="w-[300px] sticky top-40 pt-40">
+              <ol className="flex flex-col gap-5">
+                <li className="flex items-center gap-2">
+                  <div className="text-green-500 flex justify-end items-center w-[30px] relative">
+                    <Icon name="Check" />
+                  </div>
+                  <span className="font-medium">Localização</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="flex justify-end items-center w-[30px] relative">
+                    <div className="h-[2px] bg-black w-[30px] absolute" />
+                  </div>
+                  <span className="font-medium">Configuração</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="flex justify-end items-center w-[30px] relative">
+                    <div className="bg-gray-500 h-[2px] w-[15px] absolute" />
+                  </div>
+                  <span className="text-gray-500 font-medium">
+                    Sobre o espaço
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="flex justify-end items-center w-[30px] relative">
+                    <div className="h-[2px] bg-gray-500 w-[15px] absolute" />
+                  </div>
+                  <span className="text-gray-500 font-medium">
+                    Disponibilidade
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <div className="flex justify-end items-center w-[30px] relative">
+                    <div className="h-[2px] bg-gray-500 w-[15px] absolute" />
+                  </div>
+                  <span className="text-gray-500 font-medium">Atividades</span>
+                </li>
+              </ol>
+            </div>
+            <div className="flex-1 max-w-[700px] py-6">{children}</div>
           </div>
-          <div className="flex-1 max-w-[700px]">{children}</div>
-        </div>
+        </Container>
       </Layout.Main>
     </Layout>
   )
