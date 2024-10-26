@@ -1,7 +1,7 @@
 import AnnouncementLayout from '@/layouts/announcement'
 import { Button, Container, Form, Input, Spacer } from '@/ui'
 
-const AnnouncementPage = () => {
+export const AddSpaceCreatePage = () => {
   return (
     <AnnouncementLayout>
       <Container>
@@ -35,5 +35,3 @@ const AnnouncementPage = () => {
     </AnnouncementLayout>
   )
 }
-
-export default AnnouncementPage

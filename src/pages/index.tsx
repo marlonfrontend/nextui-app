@@ -1,7 +1,7 @@
 import DefaultLayout from '@/layouts/default'
 import { Container } from '@/ui'
 
-const IndexPage = () => {
+export const IndexPage = () => {
   return (
     <DefaultLayout>
       <Container>
@@ -12,5 +12,3 @@ const IndexPage = () => {
     </DefaultLayout>
   )
 }
-
-export default IndexPage
