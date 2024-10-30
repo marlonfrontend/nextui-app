@@ -1,6 +1,5 @@
-import { StepNavigator } from '@/components'
 import { Logo } from '@/components/icons'
-import { Button, Layout, Link, Navbar, Icon, Divider, Container } from '@/ui'
+import { Button, Layout, Link, Navbar, Icon, Divider } from '@/ui'
 
 export const AnnouncementLayout = ({
   children
@@ -43,22 +42,7 @@ export const AnnouncementLayout = ({
         </Navbar>
       </Layout.Header>
 
-      <Layout.Main>
-        <Container>
-          <div className="flex h-full">
-            <div className="w-[300px] sticky top-40 pt-40">
-              <StepNavigator>
-                <StepNavigator.Item isCompleted>Localização</StepNavigator.Item>
-                <StepNavigator.Item isCurrent>Configuração</StepNavigator.Item>
-                <StepNavigator.Item>Sobre o espaço</StepNavigator.Item>
-                <StepNavigator.Item>Disponibilidade</StepNavigator.Item>
-                <StepNavigator.Item>Atividades</StepNavigator.Item>
-              </StepNavigator>
-            </div>
-            <div className="flex-1 max-w-[700px] py-6">{children}</div>
-          </div>
-        </Container>
-      </Layout.Main>
+      <Layout.Main>{children}</Layout.Main>
     </Layout>
   )
 }

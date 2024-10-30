@@ -1,1 +1,3 @@
-export type FlexProps = {}
+export type FlexProps = {
+  className?: string
+}
