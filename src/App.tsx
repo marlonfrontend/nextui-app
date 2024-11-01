@@ -7,13 +7,10 @@ import { AddSpace } from '@/pages/Space'
 function App() {
   return (
     <Routes>
-      {/* initial */}
       <Route element={<IndexPage />} path="/" />
 
-      {/* listing */}
       <Route element={<AddListing />} path="/listing/create" />
 
-      {/* add space */}
       <Route element={<AddSpace key="address" />} path="/add-space/address" />
       <Route element={<AddSpace key="about" />} path="/add-space/about" />
       <Route element={<AddSpace key="photos" />} path="/add-space/photos" />
