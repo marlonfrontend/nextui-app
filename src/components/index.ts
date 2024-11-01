@@ -1,4 +1,6 @@
 export * from './Logo'
+export * from './StarIcon'
+export * from './UserIcon'
 export * from './Stepper'
 export * from './SpaceAddressForm'
 export * from './SpacePhotosForm'
