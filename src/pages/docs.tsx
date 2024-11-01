@@ -1,4 +1,4 @@
-import { DefaultLayout } from '@/layouts/DefaultLayout'
+import { DefaultLayout } from '@/layouts'
 import {
   Card,
   Input,
@@ -22,7 +22,7 @@ import {
   DateInput
 } from '@/ui'
 
-const DocsPage = () => {
+export const Docs = () => {
   return (
     <DefaultLayout>
       <Navbar maxWidth="xl">
@@ -153,5 +153,3 @@ const DocsPage = () => {
     </DefaultLayout>
   )
 }
-
-export default DocsPage

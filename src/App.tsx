@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 
 import { IndexPage } from '@/pages/index'
-import { AddListing } from '@/pages/Listing'
+import { AddListing } from '@/pages/Listings'
 import { AddSpace } from '@/pages/Space'
 
 function App() {

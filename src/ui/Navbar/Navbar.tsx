@@ -7,6 +7,7 @@ import {
   NavbarMenu as BaseNavbarMenu,
   NavbarMenuItem as BaseNavbarMenuItem
 } from '@nextui-org/navbar'
+
 import {
   NavbarProps,
   NavbarBrandProps,
