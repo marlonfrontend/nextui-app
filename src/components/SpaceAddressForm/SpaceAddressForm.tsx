@@ -16,12 +16,33 @@ export const SpaceAddressForm = () => {
       <Spacer y={20} />
 
       <Form schema={CreateSpaceAddressSchema} onSubmit={onSubmit}>
-        <Grid gap={2}>
-          <Grid.Col span={12}>
-            <Input label="CEP" name="cep" />
+        <Grid gap={5}>
+          <Grid.Col span={6}>
+            <Input label="Pais" name="state" />
           </Grid.Col>
-          <Grid.Col span={12}>
+
+          <Grid.Col span={8}>
             <Input label="Endereço" name="address" />
+          </Grid.Col>
+
+          <Grid.Col span={4}>
+            <Input label="Número" name="number" />
+          </Grid.Col>
+
+          <Grid.Col span={12}>
+            <Input label="Complemento" name="complement" />
+          </Grid.Col>
+
+          <Grid.Col span={6}>
+            <Input label="Estado" name="state" />
+          </Grid.Col>
+
+          <Grid.Col span={6}>
+            <Input label="Cidade" name="state" />
+          </Grid.Col>
+
+          <Grid.Col span={6}>
+            <Input label="CEP" name="cep" />
           </Grid.Col>
         </Grid>
 
