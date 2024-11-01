@@ -22,7 +22,7 @@ export const CustomRadio = (props: any) => {
   )
 }
 
-export const AnnouncementPage = () => {
+export const AddSpaceCreate = () => {
   return (
     <AnnouncementLayout>
       <div className="flex h-full">
@@ -33,19 +33,13 @@ export const AnnouncementPage = () => {
           <div className="flex flex-col items-center gap-20 justify-center my-20">
             <RadioGroup orientation="horizontal">
               <CustomRadio description="Up to 20 items" value="free">
-                Free
+                Espaço
               </CustomRadio>
               <CustomRadio
                 description="Unlimited items. $10 per month."
                 value="pro"
               >
-                Pro
-              </CustomRadio>
-              <CustomRadio
-                description="24/7 support. Contact us for pricing."
-                value="enterprise"
-              >
-                Enterprise
+                Serviço
               </CustomRadio>
             </RadioGroup>
             <Button color="primary" size="lg">

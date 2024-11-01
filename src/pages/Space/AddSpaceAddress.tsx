@@ -1,12 +1,42 @@
 /* eslint-disable no-console */
 import { AnnouncementLayout } from '@/layouts/AnnouncementLayout'
-import { Button, Container, Form, Input, Spacer, Text, Flex } from '@/ui'
+import { Button, Container, Form, Input, Spacer, Text, Flex, Tabs } from '@/ui'
 import { StepNavigator } from '@/components'
 
-export const AddSpaceCreatePage = () => {
+export const AddSpaceAddress = () => {
+  const ADD_SPACE_DATA = [
+    {
+      name: 'Localização',
+      value: 'address',
+      component: <div>Fotos aqui</div>
+    },
+    {
+      name: 'Configuração',
+      value: 'config',
+      component: <div>Videos aqui</div>
+    },
+    {
+      name: 'Sobre o espaço',
+      value: 'about',
+      component: <div>Documentos aqui</div>
+    },
+    {
+      name: 'Disponibilidade',
+      value: 'availability',
+      component: <div>Documentos aqui</div>
+    },
+    {
+      name: 'Atividades',
+      value: 'activities',
+      component: <div>Documentos aqui</div>
+    }
+  ]
+
   return (
     <AnnouncementLayout>
       <Container>
+        <Tabs items={ADD_SPACE_DATA} />
+
         <Flex className="flex h-full">
           <Flex className="w-[300px] sticky top-40 pt-40">
             <StepNavigator>

@@ -1,10 +1,17 @@
-import { Tabs as AppTabs, Tab as AppTab, TabsProps } from "@nextui-org/react";
-import { PropsWithChildren } from "react";
+import { Tabs as AppTabs, Tab as AppTab } from '@nextui-org/react'
 
-export const Tabs = ({ children, ...props }: PropsWithChildren<TabsProps>) => {
-  return <AppTabs {...props}>{children}</AppTabs>;
-};
+import { TabsProps } from './Tabs.types'
 
-export const Tab = ({ children, ...props }: PropsWithChildren) => {
-  return <AppTab {...props}>{children}</AppTab>;
-};
+export const Tabs = ({ items, ...props }: TabsProps) => {
+  return (
+    <div className="flex w-full flex-col">
+      <AppTabs placement="start" {...props}>
+        {items.map((item) => (
+          <AppTab key={item.value} title={item.name}>
+            {item.component}
+          </AppTab>
+        ))}
+      </AppTabs>
+    </div>
+  )
+}

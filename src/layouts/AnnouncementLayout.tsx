@@ -11,10 +11,7 @@ export const AnnouncementLayout = ({
       <Layout.Header>
         <Navbar isBordered height={70} maxWidth="full">
           <Navbar.Brand>
-            <div className="flex items-center gap-10">
-              <Logo size={50} />
-              <span>Escolha uma categoria</span>
-            </div>
+            <Logo size={50} />
           </Navbar.Brand>
           <Navbar.Content justify="end">
             <Navbar.Item className="hidden lg:flex">

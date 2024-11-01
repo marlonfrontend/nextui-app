@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 
-import { AnnouncementPage } from '@/pages/Announcement'
-import { AddSpaceCreatePage } from '@/pages/AddSpace'
+import { AddSpaceAddress, AddSpaceCreate } from '@/pages/Space'
 import { IndexPage } from '@/pages/index'
 
 function App() {
@@ -11,12 +10,12 @@ function App() {
       <Route element={<IndexPage />} path="/" />
 
       {/* announcement */}
-      <Route element={<AnnouncementPage />} path="/announcement" />
+      <Route element={<AddSpaceCreate />} path="/announcement" />
 
       {/* add space */}
-      <Route element={<AddSpaceCreatePage />} path="/add-space/create" />
-      <Route element={<AddSpaceCreatePage />} path="/add-space/address" />
-      <Route element={<AddSpaceCreatePage />} path="/add-space/address" />
+      <Route element={<AddSpaceAddress />} path="/add-space/create" />
+      <Route element={<AddSpaceAddress />} path="/add-space/address" />
+      <Route element={<AddSpaceAddress />} path="/add-space/address" />
     </Routes>
   )
 }
