@@ -1,6 +1,6 @@
 import { cn } from '@nextui-org/react'
 
-import { AnnouncementLayout } from '@/layouts/AnnouncementLayout'
+import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { Button, Container, Radio, RadioGroup } from '@/ui'
 
 export const CustomRadio = (props: any) => {
@@ -24,7 +24,7 @@ export const CustomRadio = (props: any) => {
 
 export const AddListing = () => {
   return (
-    <AnnouncementLayout>
+    <DefaultLayout>
       <Container>
         <div className="flex-1 p-10">
           <div className="text-3xl font-medium text-center">
@@ -48,6 +48,6 @@ export const AddListing = () => {
           </div>
         </div>
       </Container>
-    </AnnouncementLayout>
+    </DefaultLayout>
   )
 }

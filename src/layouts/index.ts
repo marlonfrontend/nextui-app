@@ -1,1 +1,1 @@
-export * from './AnnouncementLayout'
+export * from './DefaultLayout'

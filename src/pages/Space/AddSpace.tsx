@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import { AnnouncementLayout } from '@/layouts'
+import { DefaultLayout } from '@/layouts'
 import { Container } from '@/ui'
-import { SpaceAddressForm, Stepper } from '@/components'
+import { SpaceAddressForm, SpacePhotosForm, Stepper } from '@/components'
 
 type AddSpaceProps = {
   key: string
@@ -27,7 +27,7 @@ export const AddSpace = ({ key }: AddSpaceProps) => {
     {
       name: 'Fotos',
       value: 'photos',
-      component: <SpaceAddressForm />
+      component: <SpacePhotosForm />
     },
     {
       name: 'Disponibilidade',
@@ -42,10 +42,10 @@ export const AddSpace = ({ key }: AddSpaceProps) => {
   ]
 
   return (
-    <AnnouncementLayout>
+    <DefaultLayout>
       <Container>
         <Stepper items={ADD_SPACE_DATA} selectedKey={key} />
       </Container>
-    </AnnouncementLayout>
+    </DefaultLayout>
   )
 }

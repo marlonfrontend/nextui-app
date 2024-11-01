@@ -1,3 +1,5 @@
 export * from './Logo'
 export * from './Stepper'
 export * from './SpaceAddressForm'
+export * from './SpacePhotosForm'
+export * from './DefaultNavbar'
