@@ -10,9 +10,7 @@ export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
 
       <Layout.Main>{children}</Layout.Main>
 
-      <Layout.Footer>
-        <div className="border-t text-center py-4">Copyright</div>
-      </Layout.Footer>
+      <Layout.Footer />
     </Layout>
   )
 }

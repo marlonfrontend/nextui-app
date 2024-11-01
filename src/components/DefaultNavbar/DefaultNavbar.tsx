@@ -3,8 +3,13 @@ import { Button, Link, Navbar, Icon, Divider } from '@/ui'
 
 export const DefaultNavbar = () => {
   return (
-    <Navbar isBordered height={70} maxWidth="full">
-      <Navbar.Brand>
+    <Navbar
+      isBordered
+      classNames={{ base: 'bg-primary' }}
+      height={70}
+      maxWidth="full"
+    >
+      <Navbar.Brand className="text-white">
         <Logo size={50} />
       </Navbar.Brand>
       <Navbar.Content justify="end">
@@ -21,7 +26,7 @@ export const DefaultNavbar = () => {
           <Button
             isIconOnly
             as={Link}
-            color="default"
+            className="text-white"
             href="#"
             size="sm"
             variant="bordered"

@@ -13,7 +13,7 @@ export const Input = ({ variant = 'bordered', name, ...props }: InputProps) => {
     <StyledInput
       {...register(name)}
       classNames={{
-        inputWrapper: 'shadow-none'
+        inputWrapper: 'shadow-none border-1 data-[hover=true]:border-red'
       }}
       errorMessage={errors[name]?.message as string}
       isInvalid={!!errors[name]}

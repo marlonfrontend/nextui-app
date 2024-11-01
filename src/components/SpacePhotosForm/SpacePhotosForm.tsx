@@ -24,14 +24,14 @@ export const SpacePhotosForm = () => {
         </Grid>
 
         <Flex className="flex justify-between mt-10">
-          <Button color="primary" size="lg" variant="light">
+          <Button color="primary" variant="light">
             Cancelar
           </Button>
           <Flex className="flex gap-6">
-            <Button color="primary" size="lg" variant="bordered">
+            <Button color="primary" variant="bordered">
               Voltar
             </Button>
-            <Button color="primary" size="lg" type="submit">
+            <Button color="primary" type="submit">
               Continuar
             </Button>
           </Flex>
