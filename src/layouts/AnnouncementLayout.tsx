@@ -1,4 +1,4 @@
-import { Logo } from '@/components/icons'
+import { Logo } from '@/components'
 import { Button, Layout, Link, Navbar, Icon, Divider } from '@/ui'
 
 export const AnnouncementLayout = ({

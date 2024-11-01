@@ -1,4 +1,4 @@
-import { Logo } from '@/components/icons'
+import { Logo } from '@/components'
 import { Layout, Navbar } from '@/ui'
 
 export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
