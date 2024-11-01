@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { AnnouncementLayout } from '@/layouts'
-import { Container, Tabs } from '@/ui'
-import { SpaceAddressForm } from '@/components'
+import { Container } from '@/ui'
+import { SpaceAddressForm, Stepper } from '@/components'
 
 export const AddSpaceAddress = () => {
   const ADD_SPACE_DATA = [
@@ -35,7 +35,7 @@ export const AddSpaceAddress = () => {
   return (
     <AnnouncementLayout>
       <Container>
-        <Tabs items={ADD_SPACE_DATA} />
+        <Stepper items={ADD_SPACE_DATA} selectedKey={'address'} />
       </Container>
     </AnnouncementLayout>
   )

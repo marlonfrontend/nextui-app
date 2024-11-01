@@ -1,17 +1,27 @@
-import { Tabs as AppTabs, Tab as AppTab } from '@nextui-org/react'
+import { Tab } from '@nextui-org/react'
 
+import { StyledTabs } from './Tabs.styles'
 import { TabsProps } from './Tabs.types'
 
 export const Tabs = ({ items, ...props }: TabsProps) => {
   return (
-    <div className="flex w-full flex-col">
-      <AppTabs placement="start" {...props}>
-        {items.map((item) => (
-          <AppTab key={item.value} title={item.name}>
-            {item.component}
-          </AppTab>
-        ))}
-      </AppTabs>
-    </div>
+    <StyledTabs
+      classNames={{
+        tabList:
+          'gap-6 w-full relative rounded-none p-0 border-b border-divider',
+        cursor: 'w-full',
+        tab: 'max-w-fit px-0 h-12',
+        tabContent: ''
+      }}
+      color="primary"
+      variant="underlined"
+      {...props}
+    >
+      {items.map((item) => (
+        <Tab key={item.value} title={item.name}>
+          {item.component}
+        </Tab>
+      ))}
+    </StyledTabs>
   )
 }

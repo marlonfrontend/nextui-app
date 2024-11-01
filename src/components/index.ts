@@ -1,2 +1,2 @@
-export * from './StepNavigator'
+export * from './Stepper'
 export * from './SpaceAddressForm'

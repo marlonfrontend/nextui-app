@@ -1,18 +1,24 @@
 import { Button, Form, Input, Spacer, Text, Flex } from '@/ui'
 
 export const SpaceAddressForm = () => {
+  const onSubmit = () => {
+    // eslint-disable-next-line no-console
+    console.log('enviar')
+  }
+
   return (
-    <Flex className="flex-1 p-10 max-w-[700px]">
+    <>
       <Text className="text-3xl font-medium">
         Informe a localização do seu espaço
       </Text>
 
-      <Spacer y={10} />
-
-      <Form onSubmit={() => console.log('enviar')}>
+      <Form onSubmit={onSubmit}>
         <Input label="CEP" />
+
         <Spacer y={5} />
+
         <Input label="Endereço" />
+
         <Spacer y={10} />
 
         <Flex className="flex justify-between mt-10">
@@ -29,6 +35,6 @@ export const SpaceAddressForm = () => {
           </Flex>
         </Flex>
       </Form>
-    </Flex>
+    </>
   )
 }
