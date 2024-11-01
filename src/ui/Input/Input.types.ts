@@ -1,3 +1,5 @@
 import { InputProps as AppInputProps } from '@nextui-org/react'
 
-export type InputProps = {} & AppInputProps
+export type InputProps = {
+  name: string
+} & AppInputProps
