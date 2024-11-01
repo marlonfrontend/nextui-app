@@ -1,9 +1,14 @@
 import { ButtonGroupProps, ButtonProps } from './Button.types'
 import { StyledButton, StyledButtonGroup } from './Button.styles'
 
-export const Button = ({ children, ...props }: ButtonProps) => {
+export const Button = ({
+  children,
+  radius = 'full',
+  size = 'lg',
+  ...props
+}: ButtonProps) => {
   return (
-    <StyledButton radius={props.radius} {...props}>
+    <StyledButton radius={radius} size={size} {...props}>
       {children}
     </StyledButton>
   )
