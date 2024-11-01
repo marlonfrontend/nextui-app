@@ -3,7 +3,8 @@ import { z } from 'zod'
 import { SpaceSchema } from './Space.schema'
 
 export const CreateSpaceAddressSchema = SpaceSchema.pick({
-  address: true
+  address: true,
+  cep: true
 })
 
 export const CreateSpaceAddressSchemaOutput = SpaceSchema

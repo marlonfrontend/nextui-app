@@ -1,4 +1,5 @@
-import { Button, Form, Input, Spacer, Text, Flex } from '@/ui'
+import { Button, Form, Input, Spacer, Text, Flex, Grid } from '@/ui'
+import { CreateSpaceAddressSchema } from '@/schemas'
 
 export const SpacePhotosForm = () => {
   const onSubmit = () => {
@@ -12,14 +13,15 @@ export const SpacePhotosForm = () => {
 
       <Spacer y={20} />
 
-      <Form onSubmit={onSubmit}>
-        <Input label="CEP" />
-
-        <Spacer y={5} />
-
-        <Input label="Endereço" />
-
-        <Spacer y={10} />
+      <Form schema={CreateSpaceAddressSchema} onSubmit={onSubmit}>
+        <Grid gap={2}>
+          <Grid.Col span={12}>
+            <Input label="CEP" name="cep" />
+          </Grid.Col>
+          <Grid.Col span={12}>
+            <Input label="Endereço" name="address" />
+          </Grid.Col>
+        </Grid>
 
         <Flex className="flex justify-between mt-10">
           <Button color="primary" size="lg" variant="light">
@@ -29,7 +31,7 @@ export const SpacePhotosForm = () => {
             <Button color="primary" size="lg" variant="bordered">
               Voltar
             </Button>
-            <Button color="primary" size="lg">
+            <Button color="primary" size="lg" type="submit">
               Continuar
             </Button>
           </Flex>
