@@ -1,4 +1,4 @@
-import { DefaultLayout } from '@/layouts/DefaultLayout'
+import { DefaultLayout } from '@/layouts'
 import { Container } from '@/ui'
 
 export const IndexPage = () => {
