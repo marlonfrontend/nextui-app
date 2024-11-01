@@ -1,2 +1,1 @@
-export * from './AddSpaceAddress'
-export * from './AddSpaceCreate'
+export * from './AddSpace'

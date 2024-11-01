@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 
-import { AddSpaceAddress, AddSpaceCreate } from '@/pages/Space'
 import { IndexPage } from '@/pages/index'
+import { AddListing } from '@/pages/Listing'
+import { AddSpace } from '@/pages/Space'
 
 function App() {
   return (
@@ -9,13 +10,21 @@ function App() {
       {/* initial */}
       <Route element={<IndexPage />} path="/" />
 
-      {/* announcement */}
-      <Route element={<AddSpaceCreate />} path="/announcement" />
+      {/* listing */}
+      <Route element={<AddListing />} path="/listing/create" />
 
       {/* add space */}
-      <Route element={<AddSpaceAddress />} path="/add-space/create" />
-      <Route element={<AddSpaceAddress />} path="/add-space/address" />
-      <Route element={<AddSpaceAddress />} path="/add-space/address" />
+      <Route element={<AddSpace key="address" />} path="/add-space/address" />
+      <Route element={<AddSpace key="about" />} path="/add-space/about" />
+      <Route element={<AddSpace key="photos" />} path="/add-space/photos" />
+      <Route
+        element={<AddSpace key="availability" />}
+        path="/add-space/availability"
+      />
+      <Route
+        element={<AddSpace key="activities" />}
+        path="/add-space/activities"
+      />
     </Routes>
   )
 }

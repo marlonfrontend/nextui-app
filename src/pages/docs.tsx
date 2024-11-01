@@ -21,15 +21,11 @@ import {
   Accordion,
   DateInput
 } from '@/ui'
-import { Logo } from '@/components/icons'
 
 const DocsPage = () => {
   return (
     <DefaultLayout>
       <Navbar maxWidth="xl">
-        <Navbar.Brand>
-          <Logo />
-        </Navbar.Brand>
         <Navbar.Content>
           <Navbar.Item>Home</Navbar.Item>
           <Navbar.Item>About</Navbar.Item>
