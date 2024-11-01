@@ -7,10 +7,12 @@ export const SpaceAddressForm = () => {
   }
 
   return (
-    <>
+    <div className="max-w-[700px]">
       <Text className="text-3xl font-medium">
         Informe a localização do seu espaço
       </Text>
+
+      <Spacer y={20} />
 
       <Form onSubmit={onSubmit}>
         <Input label="CEP" />
@@ -35,6 +37,6 @@ export const SpaceAddressForm = () => {
           </Flex>
         </Flex>
       </Form>
-    </>
+    </div>
   )
 }

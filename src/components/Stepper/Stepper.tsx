@@ -20,8 +20,8 @@ export const Stepper = ({
   )
 
   return (
-    <div>
-      <ol className="flex flex-col gap-5">
+    <div className="flex flex-wrap">
+      <ol className="md:w-1/4 w-full flex flex-col gap-5 my-20">
         {items.map((item, i) => {
           const isCurrent = item.value === (selectedKey || path)
           const isCompleted = false
@@ -52,7 +52,9 @@ export const Stepper = ({
         })}
       </ol>
 
-      {activeItem && <div>{activeItem.component}</div>}
+      <div className="md:w-3/4">
+        {activeItem && <div>{activeItem.component}</div>}
+      </div>
     </div>
   )
 }
