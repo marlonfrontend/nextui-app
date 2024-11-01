@@ -1,4 +1,4 @@
-import { Button, Form, Input, Spacer, Text, Flex } from '@/ui'
+import { Button, Form, Input, Spacer, Text, Flex, Grid } from '@/ui'
 
 export const SpaceAddressForm = () => {
   const onSubmit = () => {
@@ -15,13 +15,14 @@ export const SpaceAddressForm = () => {
       <Spacer y={20} />
 
       <Form onSubmit={onSubmit}>
-        <Input label="CEP" />
-
-        <Spacer y={5} />
-
-        <Input label="Endereço" />
-
-        <Spacer y={10} />
+        <Grid gap={2}>
+          <Grid.Col span={12}>
+            <Input label="CEP" />
+          </Grid.Col>
+          <Grid.Col span={12}>
+            <Input label="Endereço" />
+          </Grid.Col>
+        </Grid>
 
         <Flex className="flex justify-between mt-10">
           <Button color="primary" size="lg" variant="light">

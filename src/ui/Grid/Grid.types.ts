@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react'
 
 export interface GridProps extends HTMLAttributes<HTMLDivElement> {
+  gap?: 1 | 2 | 3 | 4 | 5
   children: React.ReactNode
 }
 

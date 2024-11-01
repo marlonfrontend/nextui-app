@@ -4,7 +4,7 @@ import { GridProps, ColProps } from './Grid.types'
 
 export const Grid = ({ children, ...props }: GridProps) => {
   return (
-    <div className={gridVariants()} {...props}>
+    <div className={gridVariants({ gap: props.gap })} {...props}>
       {children}
     </div>
   )
