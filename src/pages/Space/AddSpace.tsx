@@ -4,10 +4,10 @@ import { Container } from '@/ui'
 import { SpaceAddressForm, SpacePhotosForm, Stepper } from '@/components'
 
 type AddSpaceProps = {
-  key: string
+  selectedKey: string
 }
 
-export const AddSpace = ({ key }: AddSpaceProps) => {
+export const AddSpace = ({ selectedKey }: AddSpaceProps) => {
   const ADD_SPACE_DATA = [
     {
       name: 'Localização',
@@ -44,7 +44,7 @@ export const AddSpace = ({ key }: AddSpaceProps) => {
   return (
     <DefaultLayout>
       <Container>
-        <Stepper items={ADD_SPACE_DATA} selectedKey={key} />
+        <Stepper items={ADD_SPACE_DATA} selectedKey={selectedKey} />
       </Container>
     </DefaultLayout>
   )
