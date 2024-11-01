@@ -1,27 +1,14 @@
-/* eslint-disable react/display-name */
-import { PropsWithChildren } from 'react'
-import { forwardRef } from '@nextui-org/system'
-
+import { ButtonGroupProps, ButtonProps } from './Button.types'
 import { StyledButton, StyledButtonGroup } from './Button.styles'
-import { ButtonProps, ButtonGroupProps } from './Button.types'
 
-export const Button = forwardRef<'button', ButtonProps>(
-  ({ children, ...props }, ref) => {
-    return (
-      <StyledButton ref={ref} {...props}>
-        {children}
-      </StyledButton>
-    )
-  }
-)
-
-export const ButtonGroup = forwardRef<
-  'div',
-  PropsWithChildren<ButtonGroupProps>
->(({ children, ...props }, ref) => {
+export const Button = ({ children, ...props }: ButtonProps) => {
   return (
-    <StyledButtonGroup ref={ref} {...props}>
+    <StyledButton radius="full" {...props}>
       {children}
-    </StyledButtonGroup>
+    </StyledButton>
   )
-})
+}
+
+export const ButtonGroup = ({ children, ...props }: ButtonGroupProps) => {
+  return <StyledButtonGroup {...props}>{children}</StyledButtonGroup>
+}
