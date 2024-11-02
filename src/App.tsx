@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
 
 import { IndexPage } from '@/pages/index'
-import { AddListing } from '@/pages/Listings'
+import { AddListing, Listings } from '@/pages/Listings'
 import { AddSpace } from '@/pages/Space'
 
 function App() {
   return (
     <Routes>
       <Route element={<IndexPage />} path="/" />
+
+      <Route element={<Listings />} path="/listing" />
 
       <Route element={<AddListing />} path="/listing/create" />
 
