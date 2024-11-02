@@ -1,12 +1,12 @@
 import { DefaultNavbar } from '@/components'
-import { Icon, Layout } from '@/ui'
+import { Layout } from '@/ui'
 
 export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <Layout>
       <Layout.Header>
         <DefaultNavbar />
-        <div className="border-b p-3 bg-white">
+        {/* <div className="border-b p-3 bg-white">
           <div className="justify-center gap-4 flex">
             <div className="cursor-pointer inline-flex items-center gap-2 py-2 px-3 border-black rounded-full text-sm hover:border-black transition-all duration-250 bg-black text-white">
               <Icon name="Check" size={16} />
@@ -22,7 +22,7 @@ export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
               Restaurantes
             </div>
           </div>
-        </div>
+        </div> */}
       </Layout.Header>
 
       <Layout.Main>{children}</Layout.Main>

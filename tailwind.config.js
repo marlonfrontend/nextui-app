@@ -21,15 +21,15 @@ module.exports = {
           colors: {
             primary: {
               foreground: "#fff",
-              DEFAULT: "#000",
+              DEFAULT: "#111",
             }
           },
         },
         dark: {
           colors: {
             primary: {
-              foreground: "#fff",
-              DEFAULT: "#000",
+              foreground: "#111",
+              DEFAULT: "#fff",
             }
           },
         },

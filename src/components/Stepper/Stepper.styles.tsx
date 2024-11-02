@@ -10,9 +10,9 @@ export const stepItemStyles = tv({
   variants: {
     isCurrent: {
       true: {
-        iconContainer: 'bg-black',
-        line: 'bg-black w-[30px]',
-        text: 'text-black'
+        iconContainer: 'bg-foreground',
+        line: 'bg-foreground w-[30px]',
+        text: 'text-foreground'
       },
       false: {
         iconContainer: '',

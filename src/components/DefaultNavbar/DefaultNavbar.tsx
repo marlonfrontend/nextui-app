@@ -1,37 +1,44 @@
+import { useTheme } from 'next-themes'
+
 import { Logo } from '@/components'
-import { Button, Link, Navbar, Icon, Divider } from '@/ui'
+import { Button, Icon, Link, Navbar } from '@/ui'
 
 export const DefaultNavbar = () => {
+  const { theme, setTheme } = useTheme()
+
   return (
-    <Navbar
-      isBordered
-      classNames={{ base: 'bg-primary' }}
-      height={70}
-      maxWidth="full"
-    >
-      <Navbar.Brand className="text-white">
+    <Navbar isBordered height={70} maxWidth="full">
+      <Navbar.Brand>
         <Logo size={50} />
       </Navbar.Brand>
       <Navbar.Content justify="end">
-        <Navbar.Item className="hidden lg:flex">
-          <Button
-            startContent={<Icon name="CircleHelp" size={20} />}
-            variant="light"
-          >
-            Precisa de ajuda?
-          </Button>
-        </Navbar.Item>
-        <Divider className="h-[40px]" orientation="vertical" />
+        {theme === 'dark' ? (
+          <button onClick={() => setTheme('light')}>
+            <Icon name="Sun" strokeWidth={1.8} />
+          </button>
+        ) : (
+          <button onClick={() => setTheme('dark')}>
+            <Icon name="Moon" strokeWidth={1.8} />
+          </button>
+        )}
         <Navbar.Item>
-          <Button
-            isIconOnly
-            as={Link}
-            className="text-white"
-            href="#"
-            size="sm"
-            variant="bordered"
-          >
-            <Icon name="X" size={20} />
+          <Link color="foreground" href="#" size="sm">
+            Features
+          </Link>
+        </Navbar.Item>
+        <Navbar.Item isActive>
+          <Link aria-current="page" href="#" size="sm">
+            Customers
+          </Link>
+        </Navbar.Item>
+        <Navbar.Item>
+          <Link color="foreground" href="#" size="sm">
+            Integrations
+          </Link>
+        </Navbar.Item>
+        <Navbar.Item>
+          <Button color="primary" href="#">
+            Entrar
           </Button>
         </Navbar.Item>
       </Navbar.Content>

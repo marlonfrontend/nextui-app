@@ -34,8 +34,8 @@ export const Listings = () => {
             {LISTING_DATA.map((item, i) => (
               <Grid.Col key={i} span={4}>
                 <Card
-                  className="w-auto rounded-none"
-                  classNames={{ body: 'px-0' }}
+                  className="w-auto rounded-none bg-transparent"
+                  classNames={{ body: 'px-0 bg-transparent' }}
                   shadow="none"
                 >
                   <Card.Body>
@@ -80,7 +80,7 @@ export const Listings = () => {
             variant="light"
           />
         </div>
-        <div className="h-screen w-[600px] bg-gray-100 ml-5 top-0 sticky" />
+        <div className="h-screen w-[600px] bg-gray-100 dark:bg-[#121212] ml-5 top-0 sticky" />
       </div>
     </DefaultLayout>
   )

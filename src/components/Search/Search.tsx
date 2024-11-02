@@ -43,7 +43,7 @@ export const Search = () => {
         </div>
       </div>
       <div className="py-12 justify-center gap-4 flex">
-        <div className="cursor-pointer inline-flex items-center gap-2 py-2 px-3 border-black rounded-full text-sm hover:border-black transition-all duration-250 bg-black text-white">
+        <div className="cursor-pointer inline-flex items-center gap-2 py-2 px-3 border-foreground rounded-full text-sm hover:border-foreground transition-all duration-250 bg-foreground text-primary-foreground">
           <Icon name="Check" size={16} />
           Casamento
         </div>
