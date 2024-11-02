@@ -21,7 +21,7 @@ export const Search = () => {
 
   return (
     <Form schema={undefined} onSubmit={() => console.log('a')}>
-      <div className="relative">
+      <div className="relative max-w-[700px] mx-auto">
         <div className="flex items-center gap-2">
           <Autocomplete
             endContent
@@ -42,6 +42,7 @@ export const Search = () => {
           </Button>
         </div>
       </div>
+
       <div className="py-12 justify-center gap-4 flex">
         <div className="cursor-pointer inline-flex items-center gap-2 py-2 px-3 border-foreground rounded-full text-sm hover:border-foreground transition-all duration-250 bg-foreground text-primary-foreground">
           <Icon name="Check" size={16} />
