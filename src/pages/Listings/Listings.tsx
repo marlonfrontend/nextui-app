@@ -1,7 +1,7 @@
 import { Pagination } from '@nextui-org/react'
 
 import { DefaultLayout } from '@/layouts'
-import { Card, Image, Grid, Divider, Chip } from '@/ui'
+import { Card, Image, Grid } from '@/ui'
 import { StarIcon, UserIcon } from '@/components'
 
 export const Listings = () => {
@@ -30,57 +30,43 @@ export const Listings = () => {
     <DefaultLayout>
       <div className="flex flex-wrap">
         <div className="flex-1 p-5 pb-0">
-          <Grid gap={3}>
+          <Grid gap={5}>
             {LISTING_DATA.map((item, i) => (
-              <>
-                <Grid.Col key={i} span={12}>
-                  <Card
-                    className="w-auto rounded-none"
-                    classNames={{ body: 'px-0' }}
-                    shadow="none"
-                  >
-                    <Card.Body>
-                      <div className="flex flex-wrap gap-4">
-                        <Image
-                          src="https://img.peerspace.com/image/upload/c_crop,g_custom/g_auto,c_fill,q_auto,f_auto,fl_progressive,w_650,ar_5:4/kyrrfk3qesumfsyfq1ko"
-                          width={300}
-                        />
-                        <div className="flex-1 relative cursor-pointer">
-                          <Chip size="sm">Casamento</Chip>
-                          <div className="text-lg font-medium mt-3 hover:underline cursor-pointer">
-                            Espaço Maggiore
+              <Grid.Col key={i} span={4}>
+                <Card
+                  className="w-auto rounded-none"
+                  classNames={{ body: 'px-0' }}
+                  shadow="none"
+                >
+                  <Card.Body>
+                    <div className="flex flex-wrap gap-3">
+                      <Image
+                        src="https://img.peerspace.com/image/upload/c_crop,g_custom/g_auto,c_fill,q_auto,f_auto,fl_progressive,w_650,ar_5:4/kyrrfk3qesumfsyfq1ko"
+                        width={300}
+                      />
+                      <div className="flex-1 relative cursor-pointer">
+                        <div className="font-medium cursor-pointer">
+                          Espaço Maggiore
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div className="text-sm inline-flex items-center gap-1">
+                            <StarIcon width={15} />
+                            <span>5.0</span>
                           </div>
-                          <div className="flex items-center gap-4">
-                            <div className="text-sm inline-flex items-center gap-1">
-                              <StarIcon width={15} />
-                              <span>5.0 (200 avaliações)</span>
-                            </div>
-                            <div className="text-sm inline-flex items-center gap-1">
-                              <UserIcon width={15} />
-                              <span>100 convidados</span>
-                            </div>
-                          </div>
-                          <div className="absolute bottom-4">
-                            {/* <div className="text-lg font-bold">
-                              <span className="font-normal text-base">
-                                Apartir de
-                              </span>{' '}
-                              R$ 20000{' '}
-                              <span className="font-normal text-base">
-                                /dia
-                              </span>
-                            </div> */}
-                            <div className="text-lg font-bold">Consultar</div>
+                          <div className="text-sm inline-flex items-center gap-1">
+                            <UserIcon width={15} />
+                            <span>100 convidados</span>
                           </div>
                         </div>
+                        <div className="text-lg font-medium">
+                          R$ 1000{' '}
+                          <span className="font-normal text-sm">/dia</span>
+                        </div>
                       </div>
-                    </Card.Body>
-                  </Card>
-                </Grid.Col>
-                <Grid.Col span={12}>
-                  <Divider className="bg-gray-200" />
-                </Grid.Col>
-              </>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Grid.Col>
             ))}
           </Grid>
           <Pagination

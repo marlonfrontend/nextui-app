@@ -12,7 +12,7 @@ Layout.Header = ({ children }: PropsWithChildren<LayoutProps>) => {
 }
 
 Layout.Main = ({ children }: PropsWithChildren<LayoutProps>) => {
-  return <main className="w-full flex-grow pt-[71px]">{children}</main>
+  return <main className="w-full flex-grow pt-[131px]">{children}</main>
 }
 
 Layout.Footer = ({ children }: PropsWithChildren<LayoutProps>) => {
