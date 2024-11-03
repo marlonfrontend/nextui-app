@@ -59,7 +59,7 @@ export const Docs = () => {
 
       <Divider my={20} />
 
-      <Input label="teste" />
+      <Input label="teste" name="" />
 
       <Divider my={20} />
 
