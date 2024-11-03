@@ -1,8 +1,8 @@
 import { ScrollShadow } from '@nextui-org/react'
 
-import { EventCategoriesProps } from './EventCategoriesFilter.types'
+import { EventCategoriesProps } from './EventCategories.types'
 
-export const EventCategoriesFilter = ({ items }: EventCategoriesProps) => {
+export const EventCategories = ({ items }: EventCategoriesProps) => {
   return (
     <ScrollShadow
       className="w-full flex gap-2 pb-3 -mb-3"

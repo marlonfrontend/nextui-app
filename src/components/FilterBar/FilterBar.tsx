@@ -1,6 +1,6 @@
 import { FilterBarVariants } from './FilterBar.styles'
 
-import { EventCategoriesFilter } from '@/components'
+import { EventCategories } from '@/components'
 import { Button, Divider, Flex, Icon } from '@/ui'
 import { EVENT_CATEGORIES } from '@/constants'
 
@@ -25,7 +25,7 @@ export const FilterBar = () => {
 
       <Divider className="h-[45px]" orientation="vertical" />
 
-      <EventCategoriesFilter items={EVENT_CATEGORIES} />
+      <EventCategories items={EVENT_CATEGORIES} />
     </div>
   )
 }
