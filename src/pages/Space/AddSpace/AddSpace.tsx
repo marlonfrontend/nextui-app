@@ -1,11 +1,9 @@
 /* eslint-disable no-console */
+import { AddSpaceProps } from './AddSpace.types'
+
 import { DefaultLayout } from '@/layouts'
 import { Container } from '@/ui'
 import { SpaceAddressForm, SpacePhotosForm, Stepper } from '@/components'
-
-type AddSpaceProps = {
-  selectedKey: string
-}
 
 export const AddSpace = ({ selectedKey }: AddSpaceProps) => {
   const ADD_SPACE_DATA = [

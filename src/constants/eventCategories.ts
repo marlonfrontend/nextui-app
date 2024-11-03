@@ -1,5 +1,4 @@
 export const EVENT_CATEGORIES = [
-  // Casamentos e Relacionados
   {
     name: 'Casamentos',
     description:
@@ -15,7 +14,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Ambientes para comemorações de chá de panela, chá de bebê e encontros pré-casamento.'
   },
-  // Festas e Celebrações Pessoais
   {
     name: 'Aniversários',
     description:
@@ -36,7 +34,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Ambientes para confraternizações de fim de ano, como Natal e Ano Novo.'
   },
-  // Eventos Corporativos
   {
     name: 'Eventos Corporativos',
     description:
@@ -62,7 +59,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Locais para eventos como feiras de negócios, exposições de arte e mostras de produtos.'
   },
-  // Entretenimento e Cultura
   {
     name: 'Shows e Performances',
     description:
@@ -83,7 +79,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Espaços para exibição de filmes ao ar livre e eventos de cinema drive-in.'
   },
-  // Eventos Gastronômicos
   {
     name: 'Jantares e Almoços Privados',
     description:
@@ -94,7 +89,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Espaços para degustações de vinho, eventos culinários e workshops gastronômicos.'
   },
-  // Eventos Religiosos e Cerimoniais
   {
     name: 'Eventos Religiosos',
     description:
@@ -105,7 +99,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Ambientes apropriados para batizados, primeiras comunhões e celebrações religiosas.'
   },
-  // Formaturas e Celebrações Acadêmicas
   {
     name: 'Formaturas',
     description:
@@ -116,7 +109,6 @@ export const EVENT_CATEGORIES = [
     description:
       'Espaços para festas de turma, confraternizações de curso e eventos estudantis.'
   },
-  // Outras Ocasiões
   {
     name: 'Encontros Culturais',
     description:

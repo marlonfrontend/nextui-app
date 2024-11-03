@@ -1,4 +1,4 @@
-import { FilterBarVariants } from './FilterBar.styles'
+import { filterBarVariants } from './FilterBar.styles'
 
 import { EventCategories } from '@/components'
 import { Button, Divider, Flex, Icon } from '@/ui'
@@ -6,7 +6,7 @@ import { EVENT_CATEGORIES } from '@/constants'
 
 export const FilterBar = () => {
   return (
-    <div className={FilterBarVariants({})}>
+    <div className={filterBarVariants({})}>
       <Flex className="flex gap-4">
         <Button color="default" size="md">
           Preço

@@ -2,7 +2,7 @@ import { DefaultLayout } from '@/layouts'
 import { Search } from '@/components'
 import { Text } from '@/ui'
 
-export const IndexPage = () => {
+export const HomeSearch = () => {
   return (
     <DefaultLayout>
       <div className="flex flex-wrap flex-col py-20 w-full justify-center">
