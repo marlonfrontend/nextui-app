@@ -3,7 +3,8 @@ import { extendVariants, Button, ButtonGroup } from '@nextui-org/react'
 export const StyledButton = extendVariants(Button, {
   variants: {
     color: {
-      primary: ''
+      primary: '',
+      default: 'bg-[#f2f2f2] text-black'
     }
   }
 })
