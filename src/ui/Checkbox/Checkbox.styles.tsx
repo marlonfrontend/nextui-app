@@ -1,4 +1,4 @@
-import { extendVariants, Checkbox } from '@nextui-org/react'
+import { extendVariants, Checkbox, CheckboxGroup } from '@nextui-org/react'
 
 export const StyledCheckbox = extendVariants(Checkbox, {
   variants: {
@@ -8,4 +8,8 @@ export const StyledCheckbox = extendVariants(Checkbox, {
       }
     }
   }
+})
+
+export const StyledCheckboxGroup = extendVariants(CheckboxGroup, {
+  variants: {}
 })
