@@ -4,7 +4,10 @@ import { EventCategoriesProps } from './EventCategoriesFilter.types'
 
 export const EventCategoriesFilter = ({ items }: EventCategoriesProps) => {
   return (
-    <ScrollShadow className="w-full flex gap-2" orientation="horizontal">
+    <ScrollShadow
+      className="w-full flex gap-2 pb-3 -mb-3"
+      orientation="horizontal"
+    >
       {items.map((item, i) => (
         <div
           key={i}

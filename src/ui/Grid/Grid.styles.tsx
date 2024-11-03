@@ -1,6 +1,6 @@
 import { tv } from 'tailwind-variants'
 
-export const gridVariants = tv({
+export const GridVariants = tv({
   base: 'grid grid-cols-12 gap-2',
   variants: {
     gap: {
@@ -13,7 +13,7 @@ export const gridVariants = tv({
   }
 })
 
-export const colVariants = tv({
+export const ColVariants = tv({
   base: 'box-border',
   variants: {
     span: {
