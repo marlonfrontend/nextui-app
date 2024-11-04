@@ -2,17 +2,13 @@ import { extendVariants, Badge } from '@nextui-org/react'
 
 export const StyledBadge = extendVariants(Badge, {
   variants: {
-    color: {
-      primary: {
-        base: 'bg-[#000]'
-      }
-    },
+    color: {},
     size: {
-      small: {
-        base: 'text-xs px-2 py-1'
+      sm: {
+        badge: 'text-xs'
       },
-      large: {
-        base: 'text-lg px-4 py-2'
+      md: {
+        badge: 'text-xs'
       }
     }
   }

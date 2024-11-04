@@ -5,7 +5,12 @@ import { BadgeProps } from './Badge.types'
 
 export const Badge = ({
   children,
+  size = 'md',
   ...props
 }: PropsWithChildren<BadgeProps>) => {
-  return <StyledBadge {...props}>{children}</StyledBadge>
+  return (
+    <StyledBadge size={size} {...props}>
+      {children}
+    </StyledBadge>
+  )
 }
