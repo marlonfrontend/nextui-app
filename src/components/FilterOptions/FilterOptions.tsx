@@ -1,10 +1,3 @@
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter
-} from '@nextui-org/react'
 import { useState } from 'react'
 
 import { FilterOptionsProps } from './FilterOptions.types'
@@ -13,6 +6,7 @@ import { SPACE_CATEGORIES } from '@/constants/spaceCategories'
 import {
   Button,
   Accordion,
+  Modal,
   Checkbox,
   CheckboxGroup,
   Spacer,
@@ -31,11 +25,11 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
       size="lg"
       onOpenChange={onOpenChange}
     >
-      <ModalContent>
+      <Modal.Content>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">Filtros</ModalHeader>
-            <ModalBody>
+            <Modal.Header className="flex flex-col gap-1">Filtros</Modal.Header>
+            <Modal.Body>
               <Chip color="primary" onClose={() => console.log('close')}>
                 Casa
               </Chip>
@@ -91,18 +85,18 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
                   </Flex>
                 </Accordion.Item>
               </Accordion>
-            </ModalBody>
-            <ModalFooter>
+            </Modal.Body>
+            <Modal.Footer>
               <Button variant="light" onPress={onClose}>
                 Limpar
               </Button>
               <Button color="primary" onPress={onClose}>
                 Filtrar
               </Button>
-            </ModalFooter>
+            </Modal.Footer>
           </>
         )}
-      </ModalContent>
+      </Modal.Content>
     </Modal>
   )
 }
