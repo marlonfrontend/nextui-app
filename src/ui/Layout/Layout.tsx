@@ -1,14 +1,21 @@
 /* eslint-disable react/display-name */
 import { PropsWithChildren } from 'react'
 
-import { LayoutProps, LayoutHeaderProps } from './Layout.types'
+import { layoutVariants } from './Layout.styles'
+import {
+  LayoutProps,
+  LayoutHeaderProps,
+  LayoutAsideProps
+} from './Layout.types'
 
 export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
   return <div className="relative flex flex-col h-screen">{children}</div>
 }
 
-Layout.Header = ({ children }: PropsWithChildren<LayoutProps>) => {
-  return <header className="top-0 fixed w-full z-40">{children}</header>
+Layout.Header = ({ children, fixed }: PropsWithChildren<LayoutHeaderProps>) => {
+  const s = layoutVariants({ fixed })
+
+  return <header className={s.header()}>{children}</header>
 }
 
 Layout.Main = ({ children }: PropsWithChildren<LayoutProps>) => {
@@ -22,9 +29,11 @@ Layout.Footer = ({ children }: PropsWithChildren<LayoutProps>) => {
 Layout.Aside = ({
   children,
   ...props
-}: PropsWithChildren<LayoutHeaderProps>) => {
+}: PropsWithChildren<LayoutAsideProps>) => {
+  const s = layoutVariants()
+
   return (
-    <div className="w-[250px] fixed h-full" {...props}>
+    <div className={s.aside()} {...props}>
       {children}
     </div>
   )

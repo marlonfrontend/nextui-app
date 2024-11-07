@@ -1,10 +1,15 @@
 import { DefaultNavbar, FilterBar } from '@/components'
 import { Layout } from '@/ui'
 
-export const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
+type DefaultLayoutProps = {
+  children: React.ReactNode
+  fixed?: boolean
+}
+
+export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <Layout>
-      <Layout.Header>
+      <Layout.Header fixed>
         <DefaultNavbar />
         <FilterBar />
       </Layout.Header>
