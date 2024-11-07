@@ -8,12 +8,16 @@ export const Flex = ({
   scrollShadow = false,
   orientation,
   height,
+  gap,
   children
 }: PropsWithChildren<FlexProps>) => {
   return (
     <div className={className}>
       {scrollShadow ? (
-        <ScrollShadow className={`h-[${height}]`} orientation={orientation}>
+        <ScrollShadow
+          className={`h-[${height}] pb-3 -mb-3`}
+          orientation={orientation}
+        >
           {children}
         </ScrollShadow>
       ) : (

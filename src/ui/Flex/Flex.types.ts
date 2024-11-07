@@ -5,4 +5,5 @@ export type FlexProps = {
   scrollShadow?: boolean
   orientation?: ScrollShadowOrientation
   height?: string
+  gap?: number
 }
