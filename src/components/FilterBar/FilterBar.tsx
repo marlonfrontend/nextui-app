@@ -3,7 +3,16 @@ import { useDisclosure } from '@nextui-org/react'
 import { filterBarVariants } from './FilterBar.styles'
 
 import { EventCategories, FilterOptions } from '@/components'
-import { Badge, Button, Divider, Flex, Icon } from '@/ui'
+import {
+  Badge,
+  Divider,
+  Flex,
+  Icon,
+  Popover,
+  Button,
+  RadioGroup,
+  Radio
+} from '@/ui'
 import { EVENT_CATEGORIES } from '@/constants'
 
 export const FilterBar = () => {
@@ -15,9 +24,35 @@ export const FilterBar = () => {
         <Button color="default" size="md">
           Preço
         </Button>
-        <Button color="default" size="md">
-          Convidados
-        </Button>
+
+        <Popover>
+          <Popover.Trigger>
+            <Button
+              color="default"
+              endContent={<Icon name="ChevronDown" size={18} />}
+              size="md"
+            >
+              Convidados
+            </Button>
+          </Popover.Trigger>
+          <Popover.Content>
+            <RadioGroup classNames={{ base: 'p-5', wrapper: 'gap-3' }}>
+              <Radio size="sm" value="1-10">
+                1 - 10
+              </Radio>
+              <Radio size="sm" value="11-25">
+                11 - 25
+              </Radio>
+              <Radio size="sm" value="26-50">
+                26 - 50
+              </Radio>
+              <Radio size="sm" value="+100">
+                Mais 100
+              </Radio>
+            </RadioGroup>
+          </Popover.Content>
+        </Popover>
+
         <Badge color="primary" content="2">
           <Button
             color="primary"

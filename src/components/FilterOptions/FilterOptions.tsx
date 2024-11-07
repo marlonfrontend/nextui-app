@@ -17,7 +17,8 @@ import {
   Checkbox,
   CheckboxGroup,
   Spacer,
-  Slider
+  Slider,
+  Chip
 } from '@/ui'
 
 export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
@@ -35,6 +36,9 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
           <>
             <ModalHeader className="flex flex-col gap-1">Filtros</ModalHeader>
             <ModalBody>
+              <Chip color="primary" onClose={() => console.log('close')}>
+                Casa
+              </Chip>
               <Accordion
                 defaultExpandedKeys={['price', 'space']}
                 selectionMode="multiple"
