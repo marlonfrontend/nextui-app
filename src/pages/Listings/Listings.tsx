@@ -13,7 +13,7 @@ export const Listings = () => {
           <Grid gap={5}>
             {LISTING_DATA.map((item, i) => (
               <Grid.Col key={i} span={4}>
-                <SpaceCard title={item.title} />
+                <SpaceCard thumbnail={item.thumbnail} title={item.title} />
               </Grid.Col>
             ))}
           </Grid>

@@ -1,9 +1,9 @@
 import { SpaceCardProps } from './SpaceCard.types'
 
-import { Card, Image } from '@/ui'
+import { Card, Image, Text } from '@/ui'
 import { StarIcon, UserIcon } from '@/components'
 
-export const SpaceCard = ({ title }: SpaceCardProps) => {
+export const SpaceCard = ({ title, thumbnail }: SpaceCardProps) => {
   return (
     <Card
       className="w-auto rounded-none bg-transparent"
@@ -12,12 +12,9 @@ export const SpaceCard = ({ title }: SpaceCardProps) => {
     >
       <Card.Body>
         <div className="flex flex-wrap gap-3">
-          <Image
-            src="https://img.peerspace.com/image/upload/c_crop,g_custom/g_auto,c_fill,q_auto,f_auto,fl_progressive,w_650,ar_5:4/kyrrfk3qesumfsyfq1ko"
-            width={300}
-          />
+          <Image src={thumbnail} width={300} />
           <div className="flex-1 relative cursor-pointer">
-            <div className="font-medium cursor-pointer">{title}</div>
+            <Text className="font-medium cursor-pointer">{title}</Text>
             <div className="flex items-center gap-4">
               <div className="text-sm inline-flex items-center gap-1">
                 <StarIcon width={15} />
