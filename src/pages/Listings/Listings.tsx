@@ -7,7 +7,7 @@ import { LISTING_DATA } from '@/constants'
 
 export const Listings = () => {
   return (
-    <DefaultLayout>
+    <DefaultLayout headerFilterable>
       <Flex className="flex flex-wrap">
         <Flex className="flex-1 p-5 pb-0">
           <Grid gap={5}>

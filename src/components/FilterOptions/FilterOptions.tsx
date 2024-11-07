@@ -3,8 +3,7 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
-  ScrollShadow
+  ModalFooter
 } from '@nextui-org/react'
 import { useState } from 'react'
 
@@ -18,7 +17,8 @@ import {
   CheckboxGroup,
   Spacer,
   Slider,
-  Chip
+  Chip,
+  Flex
 } from '@/ui'
 
 export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
@@ -60,10 +60,7 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
                   />
                 </Accordion.Item>
                 <Accordion.Item key="space" title="Tipo de espaço">
-                  <ScrollShadow
-                    className="h-[200px] p-2"
-                    orientation="vertical"
-                  >
+                  <Flex scrollShadow height="200px" orientation="vertical">
                     <CheckboxGroup defaultValue={['buenos-aires', 'london']}>
                       {SPACE_CATEGORIES.map((item, i) => (
                         <Checkbox
@@ -75,14 +72,11 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
                         </Checkbox>
                       ))}
                     </CheckboxGroup>
-                  </ScrollShadow>
+                  </Flex>
                   <Spacer y={5} />
                 </Accordion.Item>
                 <Accordion.Item key="amenities" title="Comodidades">
-                  <ScrollShadow
-                    className="h-[200px] p-2"
-                    orientation="vertical"
-                  >
+                  <Flex scrollShadow height="200px" orientation="vertical">
                     <CheckboxGroup defaultValue={['buenos-aires', 'london']}>
                       {SPACE_CATEGORIES.map((item, i) => (
                         <Checkbox
@@ -94,7 +88,7 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
                         </Checkbox>
                       ))}
                     </CheckboxGroup>
-                  </ScrollShadow>
+                  </Flex>
                 </Accordion.Item>
               </Accordion>
             </ModalBody>

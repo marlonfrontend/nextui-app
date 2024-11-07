@@ -1,5 +1,15 @@
 import { tv } from 'tailwind-variants'
 
 export const flexVariants = tv({
-  base: 'flex'
+  slots: {
+    base: 'flex',
+    scroll: ''
+  },
+  variants: {
+    height: {
+      true: {
+        scroll: ''
+      }
+    }
+  }
 })
