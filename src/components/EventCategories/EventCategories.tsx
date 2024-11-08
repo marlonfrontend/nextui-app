@@ -17,7 +17,7 @@ export const EventCategories = ({ items }: EventCategoriesProps) => {
   }
 
   return (
-    <Flex scrollShadow className="w-full" orientation="horizontal">
+    <Flex scrollShadow className="w-full pb-3 -mb-3" orientation="horizontal">
       <Flex className="flex gap-2">
         {items.map((item, i) => (
           <button

@@ -54,7 +54,11 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
                   />
                 </Accordion.Item>
                 <Accordion.Item key="space" title="Tipo de espaço">
-                  <Flex scrollShadow height="200px" orientation="vertical">
+                  <Flex
+                    scrollShadow
+                    className="pb-3 -mb-3 h-[200px]"
+                    orientation="vertical"
+                  >
                     <CheckboxGroup defaultValue={['buenos-aires', 'london']}>
                       {SPACE_CATEGORIES.map((item, i) => (
                         <Checkbox
@@ -70,7 +74,11 @@ export const FilterOptions = ({ isOpen, onOpenChange }: FilterOptionsProps) => {
                   <Spacer y={5} />
                 </Accordion.Item>
                 <Accordion.Item key="amenities" title="Comodidades">
-                  <Flex scrollShadow height="200px" orientation="vertical">
+                  <Flex
+                    scrollShadow
+                    className="pb-3 -mb-3 h-[200px]"
+                    orientation="vertical"
+                  >
                     <CheckboxGroup defaultValue={['buenos-aires', 'london']}>
                       {SPACE_CATEGORIES.map((item, i) => (
                         <Checkbox

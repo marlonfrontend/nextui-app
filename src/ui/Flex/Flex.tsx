@@ -14,10 +14,7 @@ export const Flex = ({
   return (
     <div className={className}>
       {scrollShadow ? (
-        <ScrollShadow
-          className={`h-[${height}] pb-3 -mb-3`}
-          orientation={orientation}
-        >
+        <ScrollShadow className={className} orientation={orientation}>
           {children}
         </ScrollShadow>
       ) : (
