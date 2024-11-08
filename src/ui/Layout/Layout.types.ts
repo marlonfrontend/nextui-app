@@ -1,7 +1,12 @@
 export type LayoutProps = {}
 
-export type LayoutHeaderProps = {
-  fixed?: boolean
+export type LayoutAsideProps = {}
+
+export type LayoutMainProps = {
+  paddingTop?: number
 }
 
-export type LayoutAsideProps = {}
+export type LayoutHeaderProps = {
+  fixed?: boolean
+  headerRef?: React.Ref<HTMLElement>
+}

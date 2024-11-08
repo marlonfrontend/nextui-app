@@ -12,7 +12,7 @@ export const SpaceCard = ({ title, thumbnail }: SpaceCardProps) => {
     >
       <Card.Body>
         <div className="flex flex-wrap gap-3">
-          <Image src={thumbnail} width={300} />
+          <Image loading="lazy" src={thumbnail} width={300} />
           <div className="flex-1 relative cursor-pointer">
             <Text className="font-medium cursor-pointer">{title}</Text>
             <div className="flex items-center gap-4">
